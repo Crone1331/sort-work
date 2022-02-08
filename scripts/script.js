@@ -1,6 +1,7 @@
 let ctx = document.getElementById('myChart').getContext('2d');
 let ctxSelect = document.getElementById('myChartSelect').getContext('2d');
 
+
 /**bubble data */
 const dataBuble = {
   labels: arrDataBubble,
@@ -26,10 +27,14 @@ const configBuble = {
 };
 
 let chart = new Chart(ctx, configBuble);
-
+Chart.defaults.global.defaultFontSize = 16;
 /**select data */
 const dataSelect = {
     labels: arrDataSelect,
+    font: {
+      size: 22
+
+    },
     datasets: [{
       label: 'Select Sort',
       data: arrDataSelect,
@@ -51,13 +56,13 @@ const configSelect = {
      },
 };
 
+
 let chartSelect = new Chart(ctxSelect, configSelect);
 
-
 buttonBubble.addEventListener('click', function(){
-    bubbleSort(arrDataBubble);
+    bubbleSortObj(bubleObj)
  });
 
  buttonSelect.addEventListener('click', function(){
-    selectionSort(arrDataSelect);
+  selectionSortObj(selectObj);
  });
