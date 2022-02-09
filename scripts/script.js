@@ -1,6 +1,6 @@
 let ctx = document.getElementById('myChart').getContext('2d');
 let ctxSelect = document.getElementById('myChartSelect').getContext('2d');
-
+Chart.defaults.global.defaultFontSize = 16;
 
 /**bubble data */
 const dataBuble = {
@@ -27,7 +27,7 @@ const configBuble = {
 };
 
 let chart = new Chart(ctx, configBuble);
-Chart.defaults.global.defaultFontSize = 16;
+
 /**select data */
 const dataSelect = {
     labels: arrDataSelect,

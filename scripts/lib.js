@@ -11,13 +11,12 @@ async function bubbleSortObj(arr) {
     for (var i = 0, endI = arr.length - 1; i < endI; i++) {
         for (var j = 0, endJ = endI - i; j < endJ; j++) {
             if (arr[j].num > arr[j + 1].num) {
-                chart.update();
-                await timer(1000);
                 var swap = arr[j];
                 arr[j] = arr[j + 1];
                 arr[j + 1] = swap;
                 updateDate(arrDataBubble, arr);
                 updateColor(colorArrBubble, arr);
+                await timer(1000);
                 chart.update();
             }
         }
