@@ -7,10 +7,11 @@ arr = [
 
 let arrDataBubble = arr.slice(0);
 let arrDataSelect = arr.slice(0);
+let arrDataInsert = arr.slice(0);
 
 let colorArrBubble = setColor(arrDataBubble);
 let colorArrSelect = setColor(arrDataSelect)
-
+let colorArrInsert = setColor(arrDataInsert)
 
 function setColor(arr) {
     let newArr = [];
@@ -44,7 +45,5 @@ function setColorArrObj(objArr, colorTheme) {
 
 const bubleObj = setArrObj(arrDataBubble, colorArrBubble);
 const selectObj = setArrObj(arrDataSelect, colorArrSelect);
+const insertObj = setArrObj(arrDataInsert, colorArrInsert);
 
-// bubbleSortObj(bubleObj);
-
-// console.log(bubleObj);

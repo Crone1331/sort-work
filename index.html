@@ -7,17 +7,48 @@
 	<link rel="shortcut icon" type="image/png" href="assets/favicon.ico"/>
 </head>
 <body>
+
 <hr>
 <div class="wrapper">
-	<canvas id="myChart" class ='bubbleClass'></canvas>
+	<div class="container">
+		<canvas id="myChart" class ='bubbleClass'></canvas>
+		<ul class="description">
+			<li class="title">Сортировка пузырьком</li>
+			<li class="descr__element">Данный алгоритм меняет местами два соседних элемента, если первый элемент массива больше второго. Так происходит до тех пор, пока алгоритм не обменяет местами все неотсортированные элементы.</li>
+			<li class="level">Сложность алгоритма O(n^2)</li>
+		</ul>
+	</div>
+
 	<div class="btn__bubble btn">start</div>
 </div>
 <hr>
+
 <div class="wrapper">
-	<canvas id="myChartSelect" class ='selectClass'></canvas>
+	<div class="container">
+		<canvas id="myChartSelect" class ='selectClass'></canvas>
+		<ul class="description">
+			<li class="title">Сортировка выбором</li>
+			<li class="descr__element">Cуть алгоритма заключается в проходе по массиву от начала до конца в поиске минимального элемента массива и перемещении его в начало.</li>
+			<li class="level">Сложность алгоритма O(n2)</li>
+		</ul>
+	</div>
+
 	<div class="btn__select btn">start</div>
 </div>
+<hr>
 
+<div class="wrapper">
+	<div class="container">
+		<canvas id="myChartInsert" class ='selectClass'></canvas>
+		<ul class="description">
+			<li class="title">Сортировка выбором</li>
+			<li class="descr__element">Алгоритм сортирует массив по мере прохождения по его элементам. На каждой итерации берется элемент и сравнивается с каждым элементом в уже отсортированной части массива, таким образом находя «свое место», после чего элемент вставляется на свою позицию. Так происходит до тех пор, пока алгоритм не пройдет по всему массиву. На выходе получим отсортированный массив.</li>
+			<li class="level">Сложность алгоритма O(n^2)</li>
+		</ul>
+	</div>
+
+	<div class="btn__insert btn">start</div>
+</div>
 <hr>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.1/Chart.js"></script>

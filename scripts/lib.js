@@ -6,6 +6,30 @@ function timer(ms) {
     return new Promise(res => setTimeout(res, ms));
 }
 
+async function insertionSortObj(arr) {
+    for (let i = 1, l = arr.length; i < l; i++) {
+        const current = arr[i];
+        let j = i;
+        while (j > 0 && arr[j - 1].num > current.num) {
+            arr[j] = arr[j - 1];
+            j--;
+            updateDate(arrDataInsert, arr);
+            updateColor(colorArrInsert, arr);
+            await timer(1000);
+            chartInsert.update();
+        }
+
+        await timer(1000);
+
+        arr[j] = current;
+        updateDate(arrDataInsert, arr);
+        updateColor(colorArrInsert, arr);
+        chartInsert.update();
+
+    }
+    return arr;
+};
+
 async function bubbleSortObj(arr) {
     
     for (var i = 0, endI = arr.length - 1; i < endI; i++) {
@@ -47,6 +71,7 @@ async function selectionSortObj(arr) {
 
 let buttonBubble = document.querySelector('.btn__bubble');
 let buttonSelect = document.querySelector('.btn__select');
+let buttonInsert = document.querySelector('.btn__insert');
 
 
 
