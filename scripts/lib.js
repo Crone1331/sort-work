@@ -65,7 +65,6 @@ async function selectionSortObj(arr) {
             chartSelect.update();
         }
     }
-    console.log(arr);
     return arr;
 };
 
@@ -76,12 +75,12 @@ let buttonInsert = document.querySelector('.btn__insert');
 
 
 function updateDate(arr, objArr){
-    for(i = 0; i< arr.length; i++) {
+    for (i = 0; i< arr.length; i++) {
         arr[i] = objArr[i].num;
     }
 }
 function updateColor(arr, objArr){
-    for(i = 0; i< arr.length; i++) {
+    for (i = 0; i< arr.length; i++) {
         arr[i] = objArr[i].color;
     }
 }

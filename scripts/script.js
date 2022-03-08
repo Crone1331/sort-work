@@ -1,107 +1,54 @@
-let ctx = document.getElementById('myChart').getContext('2d');
+let ctxBubble = document.getElementById('myChart').getContext('2d');
 let ctxSelect = document.getElementById('myChartSelect').getContext('2d');
 let ctxInsert = document.getElementById('myChartInsert').getContext('2d');
 
 Chart.defaults.global.defaultFontSize = 16;
 
-/**bubble data */
-const dataBuble = {
-  labels: arrDataBubble,
-  datasets: [{
-    label: 'Bubble Sort',
-    data: arrDataBubble,
-    backgroundColor: colorArrBubble,
-
-    borderWidth: 1
-  }]
-};
-
-const configBuble = {
-    type: 'bar',
-    data: dataBuble,
-    options: {
-      scales: {
-        y: {
-          beginAtZero: true
-        }
-      }
-   },
-};
-
-let chart = new Chart(ctx, configBuble);
-
-/**select data */
-const dataSelect = {
-    labels: arrDataSelect,
-    font: {
-      size: 22
-
-    },
+function setData(nameLabel, colors, arraData) {
+  const data = {
+    labels: arraData,
     datasets: [{
-      label: 'Select Sort',
-      data: arrDataSelect,
-      backgroundColor: colorArrSelect,
+      label: nameLabel,
+      data: arraData,
+      backgroundColor: colors,
   
       borderWidth: 1
     }]
   };
-  
-const configSelect = {
-      type: 'bar',
-      data: dataSelect,
-      options: {
-        scales: {
-          y: {
-            beginAtZero: true
-          }
-        }
-     },
-};
 
-
-let chartSelect = new Chart(ctxSelect, configSelect);
-
-
-/**insert data */
-const dataInsert = {
-  labels: arrDataInsert,
-  font: {
-    size: 22
-
-  },
-  datasets: [{
-    label: 'Insert Sort',
-    data: arrDataInsert,
-    backgroundColor: colorArrInsert,
-
-    borderWidth: 1
-  }]
-};
-
-const configInsert = {
+return config = {
     type: 'bar',
-    data: dataInsert,
+    data: data,
     options: {
       scales: {
         y: {
           beginAtZero: true
         }
       }
-   },
-};
+    },
+  };
+}
 
+/**bubble data */
+const configBuble = setData('Bubble Sort', colorArrBubble, arrDataBubble)
+const chart = new Chart(ctxBubble, configBuble);
 
-let chartInsert = new Chart(ctxInsert, configInsert);
+/**select data */
+const configSelect = setData('Select Sort', colorArrSelect, arrDataSelect)
+const chartSelect = new Chart(ctxSelect, configSelect);
+
+/**insert data */
+const configInsert = setData('Insert Sort', colorArrInsert, arrDataInsert)
+const chartInsert = new Chart(ctxInsert, configInsert);
 
 buttonBubble.addEventListener('click', function(){
-    bubbleSortObj(bubleObj)
- });
+  bubbleSortObj(bubleObj)
+});
 
- buttonSelect.addEventListener('click', function(){
+buttonSelect.addEventListener('click', function(){
   selectionSortObj(selectObj);
- });
+});
 
- buttonInsert.addEventListener('click', function(){
-   console.log(insertObj);
+buttonInsert.addEventListener('click', function(){
   insertionSortObj(insertObj);
- });
+});
