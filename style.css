@@ -57,10 +57,14 @@ body {
 }
 
 .description .title {
+  
     position: relative;
     text-align: center;
     font-size: 1.5rem;
     margin-bottom: 30px;
+}
+.description .title a {
+    color: black;
 }
 
 .description .level {
