@@ -27,7 +27,6 @@ async function insertionSortObj(arr) {
         chartInsert.update();
 
     }
-    return arr;
 };
 
 async function bubbleSortObj(arr) {
@@ -45,7 +44,6 @@ async function bubbleSortObj(arr) {
             }
         }
     }
-    return arr ;
 }
 
 async function selectionSortObj(arr) {
@@ -65,13 +63,12 @@ async function selectionSortObj(arr) {
             chartSelect.update();
         }
     }
-    return arr;
 };
 
-let buttonBubble = document.querySelector('.btn__bubble');
-let buttonSelect = document.querySelector('.btn__select');
-let buttonInsert = document.querySelector('.btn__insert');
 
+const buttonBubble = document.querySelector('.btn__bubble');
+const buttonSelect = document.querySelector('.btn__select');
+const buttonInsert = document.querySelector('.btn__insert');
 
 
 function updateDate(arr, objArr){
@@ -84,40 +81,4 @@ function updateColor(arr, objArr){
         arr[i] = objArr[i].color;
     }
 }
-
-//deprecated
-// async function bubbleSort(arr) {
-//     for (var i = 0, endI = arr.length - 1; i < endI; i++) {
-//         for (var j = 0, endJ = endI - i; j < endJ; j++) {
-//             if (arr[j] > arr[j + 1]) {
-//                 chart.update();
-//                 await timer(1000);
-//                 var swap = arr[j];
-//                 arr[j] = arr[j + 1];
-//                 arr[j + 1] = swap;
-//                 chart.update();
-//             }
-//         }
-//     }
-//     return arr;
-// }
-
-//deprecated
-// async function selectionSort(arr) {
-//     for (let i = 0, l = arr.length, k = l - 1; i < k; i++) {
-//         let indexMin = i;
-//         for (let j = i + 1; j < l; j++) {
-//             if (arr[indexMin] > arr[j]) {
-//                 indexMin = j;
-//             }
-//         }
-//         if (indexMin !== i) {
-//             chartSelect.update();
-//             await timer(1000);
-//             [arr[i], arr[indexMin]] = [arr[indexMin], arr[i]];
-//             chartSelect.update();
-//         }
-//     }
-//     return arr;
-// };
 

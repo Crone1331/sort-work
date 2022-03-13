@@ -7,8 +7,17 @@
 	<link rel="shortcut icon" type="image/png" href="assets/favicon.ico"/>
 </head>
 <body>
+<header class="header nav">
 
-<hr>
+	<ul>
+		<li><a href="/">Главная</a></li>
+		<li><a href="templates/bubble.html">Пузырьком</a></li>
+		<li><a href="templates/select.html">Выбором</a></li>
+		<li><a href="templates/insert.html">Вставками</a></li>
+		<li class="nav_title">Алгоритмы сортировки</li>
+
+	</ul>
+</header>
 <div class="wrapper">
 	<div class="container">
 		<canvas id="myChart" class ='bubbleClass'></canvas>
@@ -18,8 +27,11 @@
 			<li class="level">Сложность алгоритма O(n²)</li>
 		</ul>
 	</div>
+	<div class="wrapper_btn">
+		<div class="btn__bubble btn">start</div>
+		<a href="templates/bubble.html"><div class="btn">about</div></a>
+	</div>
 
-	<div class="btn__bubble btn">start</div>
 </div>
 <hr>
 
@@ -32,8 +44,10 @@
 			<li class="level">Сложность алгоритма O(n²)</li>
 		</ul>
 	</div>
-
-	<div class="btn__select btn">start</div>
+	<div class="wrapper_btn">
+		<div class="btn__select btn">start</div>
+		<a href="templates/select.html"><div class="btn">about</div></a>
+	</div>
 </div>
 <hr>
 
@@ -46,11 +60,17 @@
 			<li class="level">Сложность алгоритма  O(n²)</li>
 		</ul>
 	</div>
-
-	<div class="btn__insert btn">start</div>
+	<div class="wrapper_btn">
+		<div class="btn__insert btn">start</div>
+		<a href="templates/insert.html"><div class="btn">about</div></a>
+	</div>
 </div>
 <hr>
 
+
+<footer class="footer">
+	(c)
+</footer>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.1/Chart.js"></script>
 
 <script src="scripts/lib.js"></script>

@@ -15,10 +15,8 @@ let colorArrInsert = setColor(arrDataInsert)
 
 function setColor(arr) {
     let newArr = [];
-
-    for(let i = 0; i < arr.length ; i++) {
+    for (let i = 0; i < arr.length ; i++) {
         newArr.push(`rgba(163,${getRandomArbitrary(0,255)},${getRandomArbitrary(0,255)},0.8)`)
-
     }
    return newArr;
 }

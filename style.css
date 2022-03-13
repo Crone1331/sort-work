@@ -1,7 +1,11 @@
 #myChart, #myChartSelect, #myChartInsert {
     max-width:1000px;
     max-height:1000px;
-    ;
+}
+
+body {
+    margin: 0;
+    padding: 0;
 }
 
 .btn {
@@ -12,7 +16,7 @@
     height: 45px;
     line-height: 45px;
     border-radius: 45px;
-    margin: 20px auto;
+    margin: 20px 0;
     font-family: 'Montserrat', sans-serif;
     font-size: 11px;
     text-transform: uppercase;
@@ -106,3 +110,102 @@
     -webkit-transition-duration: 0.3s;
     transition-duration: 0.3s;
 }
+
+ul {
+    list-style: none; 
+    margin: 0 auto;
+    margin-bottom: 20px;
+  }
+  a {
+    text-decoration: none;
+    font-family: 'Lora', serif;
+    transition: .5s linear;
+  }
+  i {
+    margin-right: 10px;
+  }
+  nav {
+    display: block;
+    width: 660px;
+    margin: 0 auto 30px;
+  }
+.nav ul {
+  background: #D4E7EE;
+  overflow: hidden;
+  padding: 0;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  
+}
+.nav_title {
+    color: rgb(41, 131, 140);
+    margin-left: 20%;
+    font-size: 26px;
+}
+
+.nav a {
+  display: block;
+  padding: 1em;
+  border-right: 1px solid #ADC0CE;
+  background: rgba(173, 192, 206, .3);
+  color: #29838C;
+}
+.nav a:hover {background: #ADC0CE}
+.wrapper_btn {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.wrapper_btn a {
+    margin-left: 40px;
+}
+.wrapper_two {
+    margin: 0 auto;
+    max-width: 1200px;
+    padding: 5px 40px;
+}
+
+.video_wrapper {
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+}
+.description_top {
+    margin-bottom: 10px;
+    font-size: 22px;
+}
+.description_middle {
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+.description_bottom {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+.gif {
+    display: flex;
+    justify-content: center;
+}
+.hard {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+.description_video {
+    color: #29838C;
+    font-size: 18px;
+}
+
+.footer {
+    background: #D4E7EE;
+    overflow: hidden;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #29838C;
+    text-align: center;
+    margin-top: 40px;
+  }

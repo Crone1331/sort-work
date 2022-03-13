@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="../style.css">
+	<title>Sort Bubble</title>
+	<link rel="shortcut icon" type="image/png" href="assets/favicon.ico"/>
+</head>
+<body>
+    <header class="header nav">
+
+        <ul>
+            <li><a href="/">Главная</a></li>
+            <li><a href="../templates/bubble.html">Пузырьком</a></li>
+            <li><a href="../templates/select.html">Выбором</a></li>
+            <li><a href="../templates/insert.html">Вставками</a></li>
+            <li class="nav_title">Алгоритмы сортировки</li>
+    
+        </ul>
+    </header>
+
+    <div class="wrapper_two">
+        <h1 class ="title">Сортировка пузырьком</h1>
+        <div class="description_top">
+            Сортировку пузырьком (Bubble Sort) также иногда называют сортировкой простыми обменами.
+        </div>
+        <div class ="description_middle">
+            В общем-то единственным преимуществом этого алгоритма и является то, что он предельно прост в реализации. Сам по себе он не является эффективным, 
+            имеет сложность <b>O(n²)</b> и на практике не используется. Но знать его не помешает, ведь на его основе созданы другие более сложные и оптимизированные алгоритмы — сортировка перемешиванием (Cocktail sort), сортировка кучей (Heapsort), быстрая сортировка (Quicksort).
+            Суть алгоритма в сравнении пары соседних элементов — если они стоят в неправильном порядке, то их меняют местами. Чтобы отсортировать таким образом весь 
+            массив длиной N, придется пройтись по нему N-1 раз (последний элемент уже будет отсортирован на предыдущей итерации, поэтому для него проход не требуется).
+            Также за каждый проход в конец массива “всплывает” при сортировке по возрастанию — наибольшее число, по убыванию — наименьшее. А значит на следующей итерации 
+            его можно уже не проверять.
+        </div>
+        <div class="gif"><img src="../assets/gifs/bubble.gif" alt=""></div>
+
+
+        <div>Пример кода:</div>
+        <pre class="hljs" style="color: rgb(169, 183, 198); background: rgb(40, 43, 46); display: block; overflow-x: auto; padding: 0.5em;">            <span class="hljs-keyword" style="color: rgb(204, 120, 50);">const</span> bubbleSort = arr =&gt; {
+
+            <span class="hljs-keyword" style="color: rgb(204, 120, 50);">for</span> (<span class="hljs-keyword" style="color: rgb(204, 120, 50);">let</span> i = <span class="hljs-number" style="color: rgb(104, 151, 187);">0</span>, endI = arr.length - <span class="hljs-number" style="color: rgb(104, 151, 187);">1</span>; i &lt; endI; i++) {
+                <span class="hljs-keyword" style="color: rgb(204, 120, 50);">let</span> wasSwap = <span class="hljs-literal" style="color: rgb(104, 151, 187);">false</span>;
+
+                <span class="hljs-keyword" style="color: rgb(204, 120, 50);">for</span> (<span class="hljs-keyword" style="color: rgb(204, 120, 50);">let</span> j = <span class="hljs-number" style="color: rgb(104, 151, 187);">0</span>, endJ = endI - i; j &lt; endJ; j++) {
+                    <span class="hljs-keyword" style="color: rgb(204, 120, 50);">if</span> (arr[j] &gt; arr[j + <span class="hljs-number" style="color: rgb(104, 151, 187);">1</span>]) {
+                        [arr[j], arr[j + <span class="hljs-number" style="color: rgb(104, 151, 187);">1</span>]] = [arr[j + <span class="hljs-number" style="color: rgb(104, 151, 187);">1</span>], arr[j]];
+                        wasSwap = <span class="hljs-literal" style="color: rgb(104, 151, 187);">true</span>;
+                    }
+                }
+
+                <span class="hljs-keyword" style="color: rgb(204, 120, 50);">if</span> (!wasSwap) <span class="hljs-keyword" style="color: rgb(204, 120, 50);">break</span>;
+            }
+            
+            <span class="hljs-keyword" style="color: rgb(204, 120, 50);">return</span> arr;
+        };</pre>
+
+
+        <div class = "description_bottom">
+            Суть алгоритма в сравнении пары соседних элементов — если они стоят в неправильном порядке, то их меняют местами. 
+            Чтобы отсортировать таким образом весь массив длиной N, придется пройтись по нему N-1 раз (последний элемент уже будет отсортирован на 
+            предыдущей итерации, поэтому для него проход не требуется). Также за каждый проход в конец массива “всплывает” при сортировке по возрастанию — 
+            наибольшее число, по убыванию — наименьшее. А значит на следующей итерации его можно уже не проверять.
+        </div>
+        <div class = "description_video">Если у вас возникли трудности с понимаем работы алгоритма, можно посмотреть его визуализацию на видео:</div>
+        <div class = "video_wrapper">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/lyZQPjUT5B4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+    </div>
+    <footer class="footer">
+        (c)
+    </footer>
+</body>
+</html>
