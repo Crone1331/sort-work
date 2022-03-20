@@ -30,7 +30,7 @@ function setColor(arr) {
 //сделано для того, чтобы привязать каждое число к определенному цвету
 //благодаря тому что мы используем объект, каждый цвет привязывает к конкретному числу и изменяет свое положение в графике вместе с ним
 function setArrObj(arr, color) {
-    let arrObj = [];
+    const arrObj = [];
     for(let i = 0; i < arr.length; i++){
         arrObj.push({
             num: arr[i],

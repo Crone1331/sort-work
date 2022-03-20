@@ -31,7 +31,7 @@ async function insertionSortObj(arr) {
         arr[j] = current;
         updateDate(arrDataInsert, arr);
         updateColor(colorArrInsert, arr);
-        //обновление данных в графике 
+        //обновление данных в графике
         //происходит после каждой итерации, т.е. замены элементов в массиве
         chartInsert.update();
 
@@ -50,8 +50,8 @@ async function bubbleSortObj(arr) {
                 updateColor(colorArrBubble, arr);
                 //вызываем задержку в 1 секунду
                 await timer(1000);
-                //обновление данных в графике 
-                 //происходит после каждой итерации, т.е. замены элементов в массиве
+                //обновление данных в графике
+                //происходит после каждой итерации, т.е. замены элементов в массиве
                 chart.update();
             }
         }
@@ -74,7 +74,7 @@ async function selectionSortObj(arr) {
             [arr[i], arr[indexMin]] = [arr[indexMin], arr[i]];
             updateDate(arrDataSelect, arr);
             updateColor(colorArrSelect, arr)
-            //обновление данных в графике 
+            //обновление данных в графике
             //происходит после каждой итерации, т.е. замены элементов в массиве
             chartSelect.update();
         }
@@ -99,4 +99,3 @@ function updateColor(arr, objArr){
         arr[i] = objArr[i].color;
     }
 }
-
